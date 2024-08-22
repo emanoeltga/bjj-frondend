@@ -1,0 +1,32 @@
+<div class="container">
+<h2>Lista de ACADEMIAS</h2>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Academia</th>
+			<th scope="col">Cidade</th>
+			<th scope="col">Q.Alunos</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (country of countries; track country.name; let i = $index) {
+			<tr>
+				<th scope="row">{{ i + 1 }}</th>
+				<td>
+					{{ country.name }}
+				</td>
+				<td>
+          <img
+          [src]="'https://upload.wikimedia.org/wikipedia/' + country.imagem"
+          [alt]="'Municipio de ' + country.cidade"
+          class="me-2"
+          style="width: 20px"
+        />{{ country.cidade  }}</td>
+				<td>{{ country.quantidade | number }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
+</div>

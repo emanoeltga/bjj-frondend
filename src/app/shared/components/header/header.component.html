@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">BJJ  - MT </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+        </li>
+
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle
+            role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Cadastros
+          </a>
+          <ul class="dropdown-menu" ngbDropdownMenu >
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="academia">Academia</a></li>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="atletas-table-page">Atleta</a></li>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="eventos">Evento</a></li>
+            <li ngbDropdownItem ><hr class="dropdown-divider"></li>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="categoria">Categoria</a></li>
+            <li ngbDropdownItem ><hr class="dropdown-divider"></li>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="usuario">Usuário</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle
+              role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+            Eventos
+          </a>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="eventos">Eventos</a></li>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="ranks">Ranking</a></li>
+            <li ngbDropdownItem ><hr class="dropdown-divider"></li>
+            <li ngbDropdownItem ><a class="dropdown-item" routerLink="keys">Gerar Chaves</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="sobre">Sobre</a>
+        </li>
+
+      </ul>
+      <div class="d-flex">
+        <div class="my-auto me-4">
+            Atendente: <span class="fw-bold">Emanoel</span>
+        </div>
+          <button class="btn btn-outline-secondary" type="submit">Sair</button>
+      </div>
+    </div>
+  </div>
+</nav>
