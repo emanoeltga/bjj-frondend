@@ -11,8 +11,9 @@
           <tr>
               <th scope="col">#</th>
               <th scope="col">Nome </th>
-              <th scope="col">Telefone</th>
-              <th scope="col">Data Nascimento</th>
+              <th scope="col">Peso</th>
+              <th scope="col">Idade</th>
+              <th scope="col">Categoria</th>
               <th scope="col">Remover</th>
           </tr>
           <tr>
@@ -27,8 +28,9 @@
           <tr *ngFor=" let atleta of atletas">
               <th scope="row">{{atleta.id}}</th>
               <td><a href="/prototype/pages/atletas-form.html">{{atleta.name}}</a> </td>
-              <td>{{atleta.phone}}</td>
-              <td>{{atleta.dataNascimento}}</td>
+              <td>{{atleta.peso}}</td>
+              <td>{{atleta.idade}}</td>
+              <td>{{atleta.categoria.nome}}</td>
               <td>
                   <img src="assets/images/trash/trash3-fill.svg" width="20" height="20" alt="next">
               </td>
