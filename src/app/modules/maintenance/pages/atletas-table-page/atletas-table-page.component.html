@@ -1,10 +1,17 @@
+
+  <app-atleta-form-pages [atleta]="this.atleta" (saveEmitter)="atualizaTela()" (editEmitter)="atualizaTela()" ></app-atleta-form-pages>
+
 <div class="container text-center">
+
+  <div class="display-6">
+    <app-atleta-form-pages *ngIf="showForm"  > </app-atleta-form-pages>
+  </div>
   <div class="display-6 my-2">
     Cadastro de Atletas
   </div>
   <div class="border rounded shadow-sm p-4">
     <div class="text-end">
-      <a href="/prototype/pages/atletas.html" class="btn btn-primary">Novo</a>
+      <a routerLink="/atletas-form-page" class="btn btn-primary">Novo</a>
     </div>
     <table class="table table-striped">
       <thead>
@@ -25,15 +32,16 @@
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor=" let atleta of atletas">
+          <tr *ngFor=" let atleta of atletas" (click)="edit(atleta)" >
               <th scope="row">{{atleta.id}}</th>
-              <td><a href="/prototype/pages/atletas-form.html">{{atleta.name}}</a> </td>
+              <td>{{atleta.name}}</td>
               <td>{{atleta.peso}}</td>
               <td>{{atleta.idade}}</td>
               <td>{{atleta.categoria.nome}}</td>
-              <td>
+              <td (click)="deleteAtleta(atleta)"  >
                   <img src="assets/images/trash/trash3-fill.svg" width="20" height="20" alt="next">
               </td>
+
           </tr>
       </tbody>
   </table>

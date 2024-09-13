@@ -11,6 +11,9 @@ import { KeyComponent } from './modules/schedule/key/key.component';
 import { SobreComponent } from './modules/sobre/sobre.component';
 import { MaintenanceModule } from './modules/maintenance/maintenance.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     MaintenanceModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
